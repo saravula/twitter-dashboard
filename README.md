@@ -28,10 +28,12 @@ Real-time data visualization to analyze Twitter feeds.
   - **Twitter Search Term** - provide the search term for which you want to do the analysis. For ex: COVID19, DellTechWorld, IntelON, etc. Only one search term is allowed at the moment.
 - Extra Small NiFi node size is enough for this data ingestion.
 - After deployment is done, you would be able to see the flow in Dashboard.
-- Open the NiFi Flow to understand how it's working.
+- Open NiFi Flow to understand how it's working.
   ![Screen Shot 2022-09-20 at 3 20 59 PM](https://user-images.githubusercontent.com/2523891/191375477-84262a11-622f-4026-bfac-ac908c2d8931.png)
-- Notes are available in the NiFi Flow to help you understand the use of each processor.
+- Notes are available in NiFi Flow to help you understand the use of each processor.
   ![Screen Shot 2022-09-20 at 3 25 39 PM](https://user-images.githubusercontent.com/2523891/191375811-dd24c63e-911e-4bf0-bc67-1b531021fb7f.png)
+- All NiFi Flow parameters can be updated while the flow is running, from Deployment Manager. As soon as you Apply Changes, running processors that are affected by the Parameter changes will automatically be restarted.
+  ![Screen Shot 2022-09-20 at 3 36 28 PM](https://user-images.githubusercontent.com/2523891/191377135-4317c855-4afd-4704-bd1e-45e7bdc811f9.png)
 
 
 ### Step #2 - Cloudera Data Warehouse (CDW)
