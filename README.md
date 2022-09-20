@@ -17,7 +17,7 @@ Real-time data visualization to analyze Twitter feeds.
 
 ### Step #1 - Cloudera DataFlow (CDF)
 - Go to CDF user interface, and ensure CDF service is enabled in your CDP environment.
-- Import the following flow definition - [NiFi_Twitter_Flow.json](/NiFi_Twitter_Flow.json)
+- Import the following flow definition - [nifi-twitter-flow.json](/nifi-twitter-flow.json)
 - Select imported flow, click on Deploy, select the Target Environment and begin the deployment process.
 - During the deployment, it's going to ask about the following parameters that this NiFi Flow requires to function:
   - **AWS - Access Key ID** - visit [Understanding and getting your AWS credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html) if you're not clear on how to get it. Ensure that AWS IAM user you're using, has "AmazonS3FullAccess" permissions.
