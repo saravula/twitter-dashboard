@@ -3,7 +3,8 @@
 Real-time data visualization to analyze Twitter feeds
 
 ## Design
-![Design - CDP Data Pipeline](/assets/Twitter Dashboard.svg)
+
+![Design - Twitter Dashboard](/assets/Twitter Dashboard.svg)
 
 ## Implementation
 **Prerequisites:**
