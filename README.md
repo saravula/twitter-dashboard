@@ -38,13 +38,14 @@ Real-time data visualization to analyze Twitter feeds.
 
 ### Step #2 - Cloudera Data Warehouse (CDW)
 - Go to CDW user interface. Ensure CDW service is activated in your CDP environment, and a Database Catalog & a Virtual Warehouse compute cluster are available for use.
-- Open Hue editor and execute script TBD, upload ISO lang TBD
+- Open Hue editor and manually load [ISO Language Codes](/data/ISO Language Codes.csv) into a table. Default settings in the importer wizard will work fine. If you're not sure how to do this, visit [Hue Importer -- Select a file, choose a dialect, create a table](https://gethue.com/blog/2021-05-26-improved-hue-importer-select-a-file-choose-a-dialect-create-a-table/).
+- Execute [twitter-queries.sql](/twitter-queries.sql) in Hue editor. **Please change AWS S3 location where you've staged the tweets data.**
+- After the query execution is successful, you will be able to validate the table using queries below.
   ```sql
-  -- Raw Data
-  select * from cdph.data_dictionary a;
-  select * from cdph.covid_rate_by_soc_det a;
-  select * from cdph.covid_demo_rate_cumulative a;
-  select * from member.member_profile a;
+  SELECT * FROM twtr.iso_language_codes a;
+  SELECT * FROM twtr.tweets b;
+  SELECT * FROM twtr.twtr_view c;
+  SELECT * FROM twtr.tweets_by_minute d;
   ```
 
 ### Step #3 - Data Visualization (Dataviz)
