@@ -23,7 +23,8 @@ Real-time data visualization to analyze Twitter feeds.
   - **AWS - Access Key ID** - visit [Understanding and getting your AWS credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html) if you're not clear on how to get it. Ensure that AWS IAM user you're using, has "AmazonS3FullAccess" permissions.
   - **AWS - Secret Access Key** - same instructions as **AWS - Access Key ID**.
   - **AWS S3 Bucket** - provide AWS S3 bucket name. Ensure that IAM user has access to this S3 bucket.
-  - **AWS S3 Bucket Subdirectory** - provide subdirectory in AWS S3 bucket where you want to stage your tweets.
+  - **AWS S3 Bucket Subdirectory** - provide subdirectory in AWS S3 bucket where you want to stage your tweets. 
+    > It's usually best to delete any historical data from this subdirectory, so you're only staging latest tweets.
   - **Twitter API v2 Bearer Token** - provide your app's bearer token from Twitter's Developer Portal.
   - **Twitter Search Term** - provide the search term for which you want to do the analysis. For ex: COVID19, DellTechWorld, IntelON, etc. Only one search term is allowed at the moment.
 - Extra Small NiFi node size is enough for this data ingestion.
