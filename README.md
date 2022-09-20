@@ -38,9 +38,9 @@ Real-time data visualization to analyze Twitter feeds.
 
 ### Step #2 - Cloudera Data Warehouse (CDW)
 - Go to CDW user interface. Ensure CDW service is activated in your CDP environment, and a Database Catalog & a Virtual Warehouse compute cluster are available for use.
-- Open Hue editor and manually load [ISO Language Codes](/data/ISO Language Codes.csv) into a table. Default settings in the importer wizard will work fine. If you're not sure how to do this, visit [Hue Importer -- Select a file, choose a dialect, create a table](https://gethue.com/blog/2021-05-26-improved-hue-importer-select-a-file-choose-a-dialect-create-a-table/).
-- Execute [twitter-queries.sql](/twitter-queries.sql) in Hue editor. **Please change AWS S3 location where you've staged the tweets data.**
-- After the query execution is successful, you will be able to validate the table using queries below.
+- In Hue editor, manually load [ISO Language Codes](/data/ISO%20Language%20Codes.csv) into a table. Default settings in the importer wizard will work fine. If you're not sure how to upload data in Hue, visit [Hue Importer -- Select a file, choose a dialect, create a table](https://gethue.com/blog/2021-05-26-improved-hue-importer-select-a-file-choose-a-dialect-create-a-table/).
+- In Hue editor, execute [twitter-queries.sql](/twitter-queries.sql). **Please change AWS S3 location where you've staged the tweets data.**
+- After the query execution is successful, you will be able to validate tables using queries below.
   ```sql
   SELECT * FROM twtr.iso_language_codes a;
   SELECT * FROM twtr.tweets b;
