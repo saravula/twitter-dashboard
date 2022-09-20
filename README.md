@@ -36,9 +36,16 @@ Real-time data visualization to analyze Twitter feeds.
 - All NiFi Flow parameters can be updated while the flow is running, from Deployment Manager. As soon as you Apply Changes, running processors that are affected by the Parameter changes will automatically be restarted.
   ![Screen Shot 2022-09-20 at 3 36 28 PM](https://user-images.githubusercontent.com/2523891/191377135-4317c855-4afd-4704-bd1e-45e7bdc811f9.png)
 
-
 ### Step #2 - Cloudera Data Warehouse (CDW)
-
+- Go to CDW user interface. Ensure CDW service is activated in your CDP environment, and a Database Catalog & a Virtual Warehouse compute cluster are available for use.
+- Open Hue editor and execute script TBD, upload ISO lang TBD
+  ```sql
+  -- Raw Data
+  select * from cdph.data_dictionary a;
+  select * from cdph.covid_rate_by_soc_det a;
+  select * from cdph.covid_demo_rate_cumulative a;
+  select * from member.member_profile a;
+  ```
 
 ### Step #3 - Data Visualization (Dataviz)
 
