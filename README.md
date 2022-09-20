@@ -6,9 +6,9 @@ Real-time data visualization to analyze Twitter feeds.
 ![Design - Twitter Dashboard](/assets/design-Twitter-dashboard.png)
 
 **Explanation:**
-- NiFi Flow invokes Twitter API v2, and stages all tweets in an AWS S3 bucket.
+- NiFi Flow invokes Twitter API v2 (every 15 seconds), and stages all tweets in an AWS S3 bucket.
 - Hive External Tables points to the staging location (i.e. AWS S3 bucket).
-- Data Visualization uses Hive External Tables as its data source, to create visuals.
+- Data Visualization uses Hive External Tables as its data source, to create visuals and refresh them every 20 seconds.
 
 ## Implementation
 ### Prerequisites
