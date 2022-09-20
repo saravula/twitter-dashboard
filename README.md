@@ -5,8 +5,6 @@ Real-time data visualization to analyze Twitter feeds
 ## Design
 ![Design - Twitter Dashboard](https://user-images.githubusercontent.com/2523891/191182633-216e587f-9cec-4362-85d9-4f629bd31e14.svg)
 
-![Design - Twitter Dashboard](/assets/design-twitter-dashboard.svg)
-
 ## Implementation
 **Prerequisites:**
 
