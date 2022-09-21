@@ -14,7 +14,7 @@ Real-time data visualization to analyze Twitter feeds.
 ### Prerequisites
 - A CDP Public Cloud environment on Amazon Web Services (AWS). If you don't have an existing environment, follow instructions here to set one up - [CDP/AWS Quick Start Guide](https://docs.cloudera.com/cdp-public-cloud/cloud/aws-quickstart/topics/mc-aws-quickstart.html).
 - An app in [Twitter's Developer Portal](https://developer.twitter.com/en/portal/dashboard). This is needed to call Twitter API v2. If this is your first time using Twitter API v2, follow these instructions - [Step-by-step guide to making your first request to the new Twitter API v2](https://developer.twitter.com/en/docs/tutorials/step-by-step-guide-to-making-your-first-request-to-the-twitter-api-v2).
-
+---
 ### Step #1 - Cloudera DataFlow (CDF)
 - Go to CDF user interface, and ensure CDF service is enabled in your CDP environment.
 - Import the following flow definition - [nifi-twitter-flow.json](/nifi-twitter-flow.json)
@@ -30,12 +30,15 @@ Real-time data visualization to analyze Twitter feeds.
 - Extra Small NiFi node size is enough for this data ingestion.
 - After deployment is done, you would be able to see the flow in Dashboard.
 - Open NiFi Flow to understand how it's working.
+
   ![Screen Shot 2022-09-20 at 3 20 59 PM](https://user-images.githubusercontent.com/2523891/191375477-84262a11-622f-4026-bfac-ac908c2d8931.png)
 - Notes are available in NiFi Flow to help you understand the use of each processor.
+
   ![Screen Shot 2022-09-20 at 3 25 39 PM](https://user-images.githubusercontent.com/2523891/191375811-dd24c63e-911e-4bf0-bc67-1b531021fb7f.png)
 - All NiFi Flow parameters can be updated while the flow is running, from Deployment Manager. As soon as you Apply Changes, running processors that are affected by the Parameter changes will automatically be restarted.
-  ![Screen Shot 2022-09-20 at 3 36 28 PM](https://user-images.githubusercontent.com/2523891/191377135-4317c855-4afd-4704-bd1e-45e7bdc811f9.png)
 
+  ![Screen Shot 2022-09-20 at 3 36 28 PM](https://user-images.githubusercontent.com/2523891/191377135-4317c855-4afd-4704-bd1e-45e7bdc811f9.png)
+---
 ### Step #2 - Cloudera Data Warehouse (CDW)
 - Go to CDW user interface. Ensure CDW service is activated in your CDP environment, and a Database Catalog & a Virtual Warehouse compute cluster are available for use.
 - In Hue editor, manually load [ISO Language Codes](/data/ISO%20Language%20Codes.csv) into a table. Default settings in the importer wizard will work fine. If you're not sure how to upload data in Hue, visit [Hue Importer -- Select a file, choose a dialect, create a table](https://gethue.com/blog/2021-05-26-improved-hue-importer-select-a-file-choose-a-dialect-create-a-table/).
@@ -47,6 +50,36 @@ Real-time data visualization to analyze Twitter feeds.
   SELECT * FROM twtr.twtr_view c;
   SELECT * FROM twtr.tweets_by_minute d;
   ```
+---
+### Step #3 - Data Visualization
+- Go to CDW user interface, select Data Visualization and add a new Data VIZ.
+- In Data Visualization user interface, create a new connection. You must be logged in as admin to create a new connection.
 
-### Step #3 - Data Visualization (Dataviz)
+  ![Screen Shot 2022-09-20 at 5 00 14 PM](https://user-images.githubusercontent.com/2523891/191385311-01144e7c-63c4-4a4d-9334-204411f048d4.png)
+- Now that we have a connection to Hive virtual warehouse, let's create two datasets required to support the visuals.
+- **Create first dataset:**
+  - Dataset Title - Twitter View
+  - Dataset Source - From Table
+  - Select Database - twtr
+  - Select Table - twtr_view
 
+  ![Screen Shot 2022-09-20 at 5 13 32 PM](https://user-images.githubusercontent.com/2523891/191386839-de3ae0e1-8da5-487e-bb96-8811c1b7e1eb.png)
+- **Create second dataset:**
+  - Dataset Title - Tweets By Minute
+  - Dataset Source - From Table
+  - Select Database - twtr
+  - Select Table - tweets_by_minute
+
+  ![Screen Shot 2022-09-20 at 5 18 28 PM](https://user-images.githubusercontent.com/2523891/191387159-9fae6ddb-17f1-409c-922b-b23b7a9479ba.png)
+
+
+
+
+
+Select the new connection, and choose NEW DATASET.
+- 
+- Select the new connection, and choose Import Visual Artifacts.
+
+  ![Screen Shot 2022-09-20 at 5 03 37 PM](https://user-images.githubusercontent.com/2523891/191385727-13514315-05e8-493c-adf6-37e6ef3521c5.png)
+- 
+---
