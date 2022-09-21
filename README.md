@@ -42,8 +42,9 @@ Real-time data visualization to analyze Twitter feeds.
 ### Step #2 - Cloudera Data Warehouse (CDW)
 - Go to CDW user interface. Ensure CDW service is activated in your CDP environment, and a Database Catalog & a Virtual Warehouse compute cluster are available for use.
 - In Hue editor, manually load [ISO Language Codes](/data/ISO%20Language%20Codes.csv) into a table. Default settings in the importer wizard will work fine. If you're not sure how to upload data in Hue, visit [Hue Importer -- Select a file, choose a dialect, create a table](https://gethue.com/blog/2021-05-26-improved-hue-importer-select-a-file-choose-a-dialect-create-a-table/).
-- In Hue editor, execute [twitter-queries.sql](/twitter-queries.sql). This will create the necessary tables and views, required to support the visuals in the Twitter Dashboard. **Please change AWS S3 location where you've staged the tweets data.**
+- In Hue editor, execute [twitter-queries.sql](/twitter-queries.sql). This will create the necessary tables and views, required to support the visuals in the Twitter Dashboard. **Please change AWS S3 location to where you've staged the tweets data.**
 - After the query execution is successful, you will be able to validate tables using queries below.
+
   ```sql
   SELECT * FROM twtr.iso_language_codes a;
   SELECT * FROM twtr.tweets b;
@@ -56,7 +57,7 @@ Real-time data visualization to analyze Twitter feeds.
 - In Data Visualization user interface, create a new connection. You must be logged in as admin to create a new connection.
 
   ![Screen Shot 2022-09-20 at 5 00 14 PM](https://user-images.githubusercontent.com/2523891/191385311-01144e7c-63c4-4a4d-9334-204411f048d4.png)
-- Now that we have a connection to Hive virtual warehouse, let's create two datasets required to support the visuals.
+- Now that you have a connection to Hive virtual warehouse, let's create two datasets required to support the visuals.
 - **Create first dataset:**
   - Dataset Title - Twitter View
   - Dataset Source - From Table
@@ -71,7 +72,8 @@ Real-time data visualization to analyze Twitter feeds.
   - Select Table - tweets_by_minute
 
   ![Screen Shot 2022-09-20 at 5 18 28 PM](https://user-images.githubusercontent.com/2523891/191387159-9fae6ddb-17f1-409c-922b-b23b7a9479ba.png)
-- Now that we have created the needed datasets, it's time to Import Visual Artifacts. Take a quick look at [Importing a dashboard](https://docs.cloudera.com/data-visualization/7/howto-dashboards/topics/viz-import-dashboard.html) if you're doing it for the first time.
+- It's now time to Import Visual Artifacts. Take a quick look at [Importing a dashboard](https://docs.cloudera.com/data-visualization/7/howto-dashboards/topics/viz-import-dashboard.html) if you're doing it for the first time. 
+- Choose [dataviz-twitter-dashboard.json](/dataviz-twitter-dashboard.json) in the import dialog.
 
   ![Screen Shot 2022-09-20 at 5 03 37 PM](https://user-images.githubusercontent.com/2523891/191385727-13514315-05e8-493c-adf6-37e6ef3521c5.png)
 
@@ -79,7 +81,9 @@ Real-time data visualization to analyze Twitter feeds.
 - Once you get the following screen, click ACCEPT AND IMPORT.
 
   ![Screen Shot 2022-09-20 at 5 49 11 PM](https://user-images.githubusercontent.com/2523891/191389977-158e90ad-32b1-41e1-b31a-058648e1ebe1.png)
-- You have successfully imported the Twitter Dashboard. To see it, go to VISUALS from the top menu and select Twitter Dashboard.
+- Twitter Dashboard should be successfully imported at this point. To see it, go to VISUALS from the top menu and select Twitter Dashboard.
 - The dashboard will look something like this.
-
+  
+  ![Twtr Dashboard](https://user-images.githubusercontent.com/2523891/191391831-2347602b-02b3-46dc-889f-ea178d3a1b27.png)
 ---
+**Congratulations on creating your real-time Twitter Dashboard using Cloudera Data Platform!!!** To learn more about its implementation, please register [here](https://attend.cloudera.com/skillupseriesoctober20) to watch the recording.
