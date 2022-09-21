@@ -71,15 +71,15 @@ Real-time data visualization to analyze Twitter feeds.
   - Select Table - tweets_by_minute
 
   ![Screen Shot 2022-09-20 at 5 18 28 PM](https://user-images.githubusercontent.com/2523891/191387159-9fae6ddb-17f1-409c-922b-b23b7a9479ba.png)
-
-
-
-
-
-Select the new connection, and choose NEW DATASET.
-- 
-- Select the new connection, and choose Import Visual Artifacts.
+- Now that we have created the needed datasets, it's time to Import Visual Artifacts. Take a quick look at [Importing a dashboard](https://docs.cloudera.com/data-visualization/7/howto-dashboards/topics/viz-import-dashboard.html) if you're doing it for the first time.
 
   ![Screen Shot 2022-09-20 at 5 03 37 PM](https://user-images.githubusercontent.com/2523891/191385727-13514315-05e8-493c-adf6-37e6ef3521c5.png)
-- 
+
+  ![Screen Shot 2022-09-20 at 5 45 41 PM](https://user-images.githubusercontent.com/2523891/191389616-45bda939-8a41-489f-8547-0d1ad8101bdd.png)
+- Once you get the following screen, click ACCEPT AND IMPORT.
+
+  ![Screen Shot 2022-09-20 at 5 49 11 PM](https://user-images.githubusercontent.com/2523891/191389977-158e90ad-32b1-41e1-b31a-058648e1ebe1.png)
+- You have successfully imported the Twitter Dashboard. To see it, go to VISUALS from the top menu and select Twitter Dashboard.
+- The dashboard will look something like this.
+
 ---
