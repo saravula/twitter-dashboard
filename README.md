@@ -73,17 +73,16 @@ Real-time data visualization to analyze Twitter feeds.
 
   ![Screen Shot 2022-09-20 at 5 18 28 PM](https://user-images.githubusercontent.com/2523891/191387159-9fae6ddb-17f1-409c-922b-b23b7a9479ba.png)
 - It's now time to Import Visual Artifacts. Take a quick look at [Importing a dashboard](https://docs.cloudera.com/data-visualization/7/howto-dashboards/topics/viz-import-dashboard.html) if you're doing it for the first time. 
-- Choose [dataviz-twitter-dashboard.json](/dataviz-twitter-dashboard.json) in the import dialog.
 
   ![Screen Shot 2022-09-20 at 5 03 37 PM](https://user-images.githubusercontent.com/2523891/191385727-13514315-05e8-493c-adf6-37e6ef3521c5.png)
+- Choose [dataviz-twitter-dashboard.json](/dataviz-twitter-dashboard.json) in the import dialog.
 
   ![Screen Shot 2022-09-20 at 5 45 41 PM](https://user-images.githubusercontent.com/2523891/191389616-45bda939-8a41-489f-8547-0d1ad8101bdd.png)
 - Once you get the following screen, click ACCEPT AND IMPORT.
 
   ![Screen Shot 2022-09-20 at 5 49 11 PM](https://user-images.githubusercontent.com/2523891/191389977-158e90ad-32b1-41e1-b31a-058648e1ebe1.png)
 - Twitter Dashboard should be successfully imported at this point. To see it, go to VISUALS from the top menu and select Twitter Dashboard.
-- The dashboard will look something like this.
+- **Congratulations on creating your real-time Twitter Dashboard using Cloudera Data Platform!!!** To learn more about its implementation, please register [here](https://attend.cloudera.com/skillupseriesoctober20) to watch the recording.
   
   ![Twtr Dashboard](https://user-images.githubusercontent.com/2523891/191391831-2347602b-02b3-46dc-889f-ea178d3a1b27.png)
 ---
-**Congratulations on creating your real-time Twitter Dashboard using Cloudera Data Platform!!!** To learn more about its implementation, please register [here](https://attend.cloudera.com/skillupseriesoctober20) to watch the recording.
