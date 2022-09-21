@@ -21,7 +21,7 @@ Real-time data visualization to analyze Twitter feeds.
 - Select imported flow, click on Deploy, select the Target Environment and begin the deployment process.
 - During the deployment, it's going to ask about the following parameters that this NiFi Flow requires to function:
   - **AWS - Access Key ID** - visit [Understanding and getting your AWS credentials](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html) if you're not clear on how to get it. Ensure that AWS IAM user you're using, has "AmazonS3FullAccess" permissions.
-  - **AWS - Secret Access Key** - same instructions as **AWS - Access Key ID**.
+  - **AWS - Secret Access Key** - same instructions as AWS - Access Key ID.
   - **AWS S3 Bucket** - provide AWS S3 bucket name. Ensure that IAM user has access to this S3 bucket.
   - **AWS S3 Bucket Subdirectory** - provide subdirectory in AWS S3 bucket where you want to stage your tweets. 
     > It's usually best to delete any historical data from this subdirectory, so you're only staging latest tweets.
