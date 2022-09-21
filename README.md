@@ -1,6 +1,6 @@
 # Twitter Dashboard
 ## Use Case
-Real-time data visualization to analyze Twitter feeds.
+Real-time data visualization to analyze Twitter feeds, using Cloudera Data Platform.
 
 ## Design
 ![Design - Twitter Dashboard](/assets/design-Twitter-dashboard.png)
